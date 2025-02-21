@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#20132;&#36890;&#38598;&#20013;&#30330;&#29983;&#28857;&#35373;&#23450;&#27231;&#33021;&#12398;&#25805;&#20316;&#26041;&#27861; | PLATEAU&#20132;&#36890;&#12471;&#12511;&#12517;&#12524;&#12540;&#12479; </title>
+    <title>&#20132;&#36890;&#38598;&#20013;&#30330;&#29983;&#28857;&#35373;&#23450;&#27231;&#33021; | PLATEAU&#20132;&#36890;&#12471;&#12511;&#12517;&#12524;&#12540;&#12479; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#20132;&#36890;&#38598;&#20013;&#30330;&#29983;&#28857;&#35373;&#23450;&#27231;&#33021;&#12398;&#25805;&#20316;&#26041;&#27861; | PLATEAU&#20132;&#36890;&#12471;&#12511;&#12517;&#12524;&#12540;&#12479; ">
+    <meta name="title" content="&#20132;&#36890;&#38598;&#20013;&#30330;&#29983;&#28857;&#35373;&#23450;&#27231;&#33021; | PLATEAU&#20132;&#36890;&#12471;&#12511;&#12517;&#12524;&#12540;&#12479; ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -77,49 +77,106 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="交通集中発生点設定機能の操作方法">交通集中発生点設定機能の操作方法</h1>
+<h1 id="交通集中発生点設定機能">交通集中発生点設定機能</h1>
 
-<p><img src="../resources/ZoneSetting/MenuTab.png" alt="TrafficSimulationTool"></p>
+<p>道路ネットワークをもとにシミュレーション用道路ネットワークを作成します。</p>
 <ul>
-<li>メニューバーから「PLATEAU」-「TrafficSimulationTool」を選択しTrafficSimulationToolウィンドウを開きます。</li>
+<li>交通集中発生点は車両が到着（集中）したり出発（発生）したりするポイントです。</li>
+<li>ゾーンは交通需要を予測するための任意のエリアです。</li>
+<li>ゾーンには交通発生集中点として交差点と建物が登録されており建物の情報からゾーンでの交通需要を予測し車の集中発生をシミュレーションします。</li>
+<li>手順を開始する前に予めPLATEAU SDK for Unityにより都市モデルをインポートし道路ネットワークの生成・整備を行っておく必要があります。</li>
+<li>Unityのメニューバーから<code>PLATEAU</code>-<code>交通シミュレータ</code>を選択し<code>交通シミュレータ</code>ウィンドウを開き<code>交通集中発生点設定</code>タブを選択します。</li>
 </ul>
-<h1 id="todo-ui変更予定">TODO UI変更予定</h1>
-<h2 id="自動生成">自動生成</h2>
-<p><img src="../resources/ZoneSetting/AutoGenerate.png" alt="ゾーン編集"></p>
-<h2 id="ゾーン編集">ゾーン編集</h2>
-<p><img src="../resources/ZoneSetting/AutoGenerate.png" alt="ゾーン編集"></p>
+<p><img src="../resources/ZoneSetting/MenuTab.png" alt="交通集中発生点設定タブ"></p>
+<h2 id="ゾーンの生成">ゾーンの生成</h2>
 <ul>
-<li>ゾーンは街区です。</li>
-<li>登録された建物の追加削除を行うにはゾーンを選択した状態で建物をクリックしてください。</li>
-<li>ゾーンの形状を変更するには「Tools」-「ProBuilder」-「ProBuilder Window」からウィンドウを表示してください。</li>
-<li>「Vertex Selection」を選択します。</li>
-<li>ゾーンを選択し頂点を選択するとギズモが表示され、移動することでゾーン形状を変更することができます。</li>
+<li><code>自動生成</code>をクリックすることでおおまかな街区ごとにゾーンと道路ネットワーク端部の交通集中発生点を生成することができます。</li>
 </ul>
+<p><img src="../resources/ZoneSetting/AutoGenerate.png" alt="自動生成"></p>
+<ul>
+<li>生成が完了するとゾーン（青色の形状）と道路ネットワーク端部の交通集中発生点（赤色の形状）が生成されます。</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneGenerated.png" alt="自動生成完了"></p>
+<h2 id="ゾーンの選択">ゾーンの選択</h2>
+<ul>
+<li>ゾーン上のアイコンをクリックするとゾーンが選択されハイライトされます。</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneSelected.png" alt="ゾーン選択"></p>
+<h2 id="ゾーンに属する建物の登録解除">ゾーンに属する建物の登録・解除</h2>
+<ul>
+<li><p>ゾーンに属する建物の登録・解除を行うにはゾーンを選択しハイライトされた建物をクリックします。</p>
+</li>
+<li><p>登録中</p>
+</li>
+</ul>
+<p><img src="../resources/ZoneSetting/BuildingAssign.png" alt="建物登録"></p>
+<ul>
+<li>解除</li>
+</ul>
+<p><img src="../resources/ZoneSetting/BuildingUnassign.png" alt="建物解除"></p>
 <h2 id="ゾーンに属する交通集中発生点の登録解除">ゾーンに属する交通集中発生点の登録・解除</h2>
-<p><img src="../resources/ZoneSetting/AutoGenerate.png" alt="ゾーンに属する交通集中発生点の登録・解除"></p>
 <ul>
-<li>アセットリストには配置されたアセットの一覧が表示されます。</li>
-<li>アセットリストのアイテムをクリックすることで、配置したアセットに自動でフォーカスされます。</li>
-<li>削除アイコンを押すことで削除することも可能です。</li>
+<li><p>ゾーンに属する交通発生集中点の登録・解除を行うにはゾーンを選択し交通集中点アイコンをクリックします。</p>
+</li>
+<li><p>登録</p>
+</li>
 </ul>
+<p><img src="../resources/ZoneSetting/PointAssign.png" alt="交通発生集中点登録"></p>
+<ul>
+<li>解除</li>
+</ul>
+<p><img src="../resources/ZoneSetting/PointUnassign.png" alt="交通発生集中点解除"></p>
+<h2 id="ゾーン形状の編集">ゾーン形状の編集</h2>
+<ul>
+<li><p>ゾーンの形状を変更するにはProBuilderを使用します。セットアップについてはUnityのページを参照してください。</p>
+</li>
+<li><p>ゾーンを選択します。</p>
+</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneEdit.png" alt="ゾーン編集"></p>
+<ul>
+<li><code>ProBuilder</code>ウィンドウを表示し<code>Vertex Selection</code>を選択します。</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneEditProbuilder.png" alt="ゾーン編集"></p>
+<ul>
+<li>ゾーン外周の頂点にフォーカスすると点が表示されます。</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneEditProbuilderPoint.png" alt="ゾーン編集"></p>
+<ul>
+<li>点をクリックするとギズモが表示され、移動することで形状を変更することができます。</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneEdited.png" alt="ゾーン編集"></p>
 <h2 id="結合">結合</h2>
-<p><img src="../resources/ZoneSetting/AutoGenerate.png" alt="ゾーンの結合"></p>
 <ul>
-<li>複数のゾーンを選択します。</li>
-<li>「結合」をクリックすることでゾーンを結合することができます。</li>
+<li>複数のゾーンを一つにまとめるにはCtrlキーを押下したまま複数のゾーンを選択します。</li>
 </ul>
+<p><img src="../resources/ZoneSetting/ZoneCombine.png" alt="ゾーン結合"></p>
+<ul>
+<li><code>結合</code>をクリックすることでゾーンを結合することができます。</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneCombineButton.png" alt="ゾーン結合"></p>
+<p><img src="../resources/ZoneSetting/ZoneGenerated.png" alt="ゾーン結合"></p>
 <h2 id="追加">追加</h2>
-<p><img src="../resources/ZoneSetting/AutoGenerate.png" alt="ゾーンの追加"></p>
 <ul>
-<li>追加を選択します。</li>
-<li>建物を選択するとゾーンが追加されます。</li>
+<li>ゾーンを追加するには<code>追加</code>を選択します。</li>
 </ul>
+<p><img src="../resources/ZoneSetting/ZoneAddButton.png" alt="ゾーン追加"></p>
+<ul>
+<li>ハイライトされた建物を選択するとゾーンが追加されます。</li>
+<li>シーン上で右クリックすると追加をとりやめます。</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneAdd.png" alt="ゾーン追加"></p>
+<p><img src="../resources/ZoneSetting/ZoneAdded.png" alt="ゾーン追加"></p>
 <h2 id="削除">削除</h2>
-<p><img src="../resources/ZoneSetting/AutoGenerate.png" alt="ゾーンの削除"></p>
 <ul>
-<li>ゾーンをを選択します。</li>
-<li>「結合」をクリックすることでゾーンを結合することができます。</li>
+<li>ゾーンを削除するにはゾーンをを選択します。</li>
 </ul>
+<p><img src="../resources/ZoneSetting/ZoneRemove.png" alt="ゾーン削除"></p>
+<ul>
+<li><code>削除</code>をクリックすることでゾーンを削除することができます。</li>
+</ul>
+<p><img src="../resources/ZoneSetting/ZoneRemoveButton.png" alt="ゾーン削除"></p>
+<p><img src="../resources/ZoneSetting/ZoneRemoved.png" alt="ゾーン削除"></p>
 </article>
           </div>
           

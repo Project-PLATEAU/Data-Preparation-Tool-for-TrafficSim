@@ -80,16 +80,170 @@
 <h1 id="セットアップの手順">セットアップの手順</h1>
 
 <p>本書では、ツールのセットアップ手順について記載しています。</p>
-<h2 id="道路ネットワークの準備">道路ネットワークの準備</h2>
-<p><img src="../resources/Setup/Setup.png" alt="道路ネットワークの生成"></p>
+<h2 id="unityのダウンロードとインストール">Unityのダウンロードとインストール</h2>
 <ul>
-<li><p>PLATEAU SDK for Unityにてシミュレーション対象エリアの都市モデルを取り込み、道路ネットワークを生成します。</p>
-</li>
-<li><p>生成された道路ネットワークを編集し、車線数や一方通行など実際の道路に即したネットワークへ変更します。</p>
+<li>Unity Hub を<a href="https://unity3d.com/jp/get-unity/download">こちら</a>からインストールします。</li>
+<li>Unity Hub とは、Unityのお好きなバージョンをインストールして起動することのできるソフトウェアです。</li>
+<li>Unity Hubを起動し、左のサイドバーからインストール → 右上のボタンからエディターをインストール をクリックします。</li>
+</ul>
+<p><img src="../resources/Setup/unityHubMenu.png" alt="Unityのダウンロードとインストール"></p>
+<p>Unity 2022.3 で始まるバージョンを選択し、インストールを押します。</p>
+<p><img src="../resources/Setup/unityHubInstall.png" alt="Unityのダウンロードとインストール"></p>
+<h2 id="unityプロジェクトを作成">Unityプロジェクトを作成</h2>
+<p>Unity Hub を起動します。</p>
+<p>左サイドバーの <code>プロジェクト</code> を押し、右上の <code>新しいプロジェクト</code> ボタンをクリックします。</p>
+<p><img src="../resources/Setup/unityHubProject.png" alt="Unityプロジェクトを作成"></p>
+<p>新しいプロジェクトの設定画面で、次のように設定します。</p>
+<ul>
+<li>画面上部の <code>エディターバージョン</code> を <code>2022.3</code> で始まる番号にします。</li>
+<li>画面中部の <code>テンプレート</code> は <code>High Definitaion 3D</code> を選択します。</li>
+<li>画面右下のプロジェクト名をお好みのものに設定します。</li>
+<li><code>プロジェクトを作成</code> ボタンを押します。</li>
+</ul>
+<p><img src="../resources/Setup/createProject.png" alt="Unityプロジェクトを作成"></p>
+<h2 id="ツールをunityにインポート">ツールをUnityにインポート</h2>
+<ul>
+<li>作成したプロジェクトをクリックすると、Unityが起動します。</li>
+<li>Unityが起動したら、以下の各ツールのリリースページからtgzファイルをダウンロードします。<ul>
+<li><a href="https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity/releases">PLATEAU SDK for Unityのリリースページ</a></li>
+<li><a href="https://github.com/Project-PLATEAU/PLATEAU-SDK-Toolkits-for-Unity/releases">PLATEAU-SDK-Toolkits-for-Unityのリリースページ</a></li>
+<li><a href="https://github.com/Project-PLATEAU/Data-Preparation-Tool-for-TrafficSim/releases">交通シミュレータのリリースページ</a></li>
+</ul>
 </li>
 </ul>
-<h2 id="シミュレーションデータの準備">シミュレーションデータの準備</h2>
-<p>本書に従い、出力されたデータをAvenue等の交通シミュレータに取り込み、車両位置情報データおよび道路指標値データとすることで可視化することができます。</p>
+<div class="NOTE"><h5>Note</h5><p>git指定で導入する方法は以下を参考にしてください。<br>
+<a href="https://project-plateau.github.io/PLATEAU-SDK-for-Unity/manual/Installation.html#git%E3%81%AEurl%E6%8C%87%E5%AE%9A%E3%81%A7%E5%B0%8E%E5%85%A5%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">SDKの使い方:GitのURL指定で導入する方法</a></p>
+</div>
+<ul>
+<li>ダウンロードできたら、Unityのメニューバーから <code>Window</code> → <code>Package Manager</code> を選択します。</li>
+<li>Package Manager ウィンドウの左上の <code>＋</code> ボタンから <code>Add pacakge from tarball...</code> を選択します。</li>
+</ul>
+<p><img src="../resources/Setup/addPacakge.png" alt="ツールをUnityにインポート"></p>
+<ul>
+<li>先ほどダウンロードした 各ツールの tgz ファイルを指定します。するとウィンドウのパッケージ一覧に各ツール名が表示されます。</li>
+</ul>
+<p><img src="../resources/Setup/packageManager.png" alt="ツールをUnityにインポート"></p>
+<ul>
+<li>全てのツールを導入したら、Package Manager ウィンドウを閉じます。</li>
+</ul>
+<h2 id="道路ネットワークの準備">道路ネットワークの準備</h2>
+<p><img src="../resources/Setup/Setup.png" alt="道路ネットワークの生成"></p>
+<p>PLATEAU SDK for Unityにてシミュレーション対象エリアの都市モデルをインポートします。</p>
+<ul>
+<li><a href="https://project-plateau.github.io/PLATEAU-SDK-for-Unity/manual/ImportCityModels.html">PLATEAU SDK for Unity 3D都市モデルのインポート</a></li>
+</ul>
+<p>PLATEAU SDK for Unityにて道路ネットワークを生成し、車線数や一方通行など実際の道路に即したネットワークへ編集します。</p>
+<ul>
+<li><a href="https://project-plateau.github.io/PLATEAU-SDK-for-Unity/manual/RoadNetwork.html">PLATEAU SDK for Unity 道路ネットワークの利用</a></li>
+</ul>
+<h2 id="シミュレーションデータの準備からシミュレーション開始まで">シミュレーションデータの準備からシミュレーション開始まで</h2>
+<p>可視化までのデータの準備は大まかに下記のような流れで行う</p>
+<ol>
+<li><code>IF001</code> <code>IF002</code> <code>IF003</code>を利用して道路ネットワークを作成する（前項：道路ネットワークの準備）。</li>
+<li><a href="ZoneSetting.html">交通集中発生点設定機能</a>および <a href="SignalSetting.html">信号現示設定機能</a>にて道路ネットワークと<code>IF004</code>をもとにシミュレーション用道路ネットワークを生成する。</li>
+<li><a href="Export.html">データ出力機能</a>にて<code>IF101</code> <code>IF102</code>を出力する。</li>
+<li>実地での観測結果やオープンデータをもとに<code>IF005</code> <code>IF006</code>を作成する。</li>
+<li><a href="CurrentEstimation.html">既存OD交通量推定機能</a>および<a href="DevelopEstimation.html">開発OD交通量推定機能</a>にて<code>IF101</code> <code>IF005</code> <code>IF006</code>をもとに<code>IF103</code> <code>IF104</code>を出力する。</li>
+<li>Avenue等の交通シミュレータにて<code>IF101</code> <code>IF102</code> <code>IF103</code> <code>IF104</code>をもとにシミュレーションを行い、可視化用の<code>IF007</code> <code>IF008</code>を出力する</li>
+<li>ランタイム環境（デバッグプレイ・スタンドアロンビルド）にて<code>IF007</code> <code>IF008</code>を動的にロードし、シミュレーションを可視化する。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ID</th>
+<th style="text-align:right">データ概要</th>
+<th style="text-align:center">ファイル形式</th>
+<th style="text-align:center">ファイル名<br><code>*はファイル名不定</code></th>
+<th style="text-align:center">ファイル概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">IF001</td>
+<td style="text-align:right">都市モデル地形データ</td>
+<td style="text-align:center">CityGML</td>
+<td style="text-align:center"><code>*</code>dem.gml</td>
+<td style="text-align:center">都市モデル地形地形情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF002</td>
+<td style="text-align:right">都市モデル道路データ</td>
+<td style="text-align:center">CityGML</td>
+<td style="text-align:center"><code>*</code>tran.gml</td>
+<td style="text-align:center">都市モデル地形道路情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF003</td>
+<td style="text-align:right">都市モデル建築物データ</td>
+<td style="text-align:center">CityGML</td>
+<td style="text-align:center"><code>*</code>bldg.gml</td>
+<td style="text-align:center">都市モデル建築物情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF004</td>
+<td style="text-align:right">信号現示データ</td>
+<td style="text-align:center">CSV</td>
+<td style="text-align:center"><code>*</code>警視庁_定義_yyyymm.csv<br><code>*</code>警視庁_制御_yyyymm.csv</td>
+<td style="text-align:center">信号定義情報（オープンデータ）<br>信号制御情報（オープンデータ）</td>
+</tr>
+<tr>
+<td style="text-align:left">IF101</td>
+<td style="text-align:right">シミュレーション用道路ネットワークデータ</td>
+<td style="text-align:center">GeoJSON</td>
+<td style="text-align:center">output_node.geojson<br>output_link.geojson<br>output_lane.geojson<br>output_track.geojson<br>output_zone.geojson</td>
+<td style="text-align:center">交差点情報<br>道路情報<br>車線情報<br>交差点軌跡情報<br>ゾーン情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF102</td>
+<td style="text-align:right">シミュレーション用信号現示データ</td>
+<td style="text-align:center">GeoJSON</td>
+<td style="text-align:center">output_signalcontroler.geojson<br>output_signallight.geojson<br>output_signalstep.geojson</td>
+<td style="text-align:center">信号制御器情報<br>信号灯火器情報<br>信号現示階梯情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF005</td>
+<td style="text-align:right">断面交通量データ</td>
+<td style="text-align:center">CSV</td>
+<td style="text-align:center">IF105_lk.csv</td>
+<td style="text-align:center">断面交通量情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF006</td>
+<td style="text-align:right">交差点交通量データ</td>
+<td style="text-align:center">CSV</td>
+<td style="text-align:center">IF106_crs.csv</td>
+<td style="text-align:center">交差点交通量情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF103</td>
+<td style="text-align:right">既存OD交通量データ</td>
+<td style="text-align:center">CSV</td>
+<td style="text-align:center">IF103_estgnr.csv</td>
+<td style="text-align:center">既存OD交通量情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF104</td>
+<td style="text-align:right">開発OD交通量データ</td>
+<td style="text-align:center">CSV</td>
+<td style="text-align:center">IF104_dev.csv</td>
+<td style="text-align:center">開発OD交通量情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF007</td>
+<td style="text-align:right">車両位置情報データ</td>
+<td style="text-align:center">CSV</td>
+<td style="text-align:center"><code>*</code>IF007_vpos.csv</td>
+<td style="text-align:center">車の時系列位置情報</td>
+</tr>
+<tr>
+<td style="text-align:left">IF008</td>
+<td style="text-align:right">道路指標値データ</td>
+<td style="text-align:center">CSV</td>
+<td style="text-align:center"><code>*</code>IF008_Indactor.csv</td>
+<td style="text-align:center">渋滞の時系列指標値情報</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
