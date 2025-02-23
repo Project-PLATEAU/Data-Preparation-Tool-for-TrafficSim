@@ -22,15 +22,12 @@
       "is_incremental": false
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "LunPchBnkwv7l55LkhlptYZ9ZRJxvh4rvgx7sp03/Hs="
+          "hash": "bb+2bvVYgGPc766pU/vBoGCrF3SI7AsEzAuQyP3XX/Q="
         }
       },
       "is_incremental": false,
