@@ -79,104 +79,70 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="交通集中発生点設定機能">交通集中発生点設定機能</h1>
 
-<p>道路ネットワークをもとにシミュレーション用道路ネットワークを作成します。</p>
-<ul>
-<li>交通集中発生点は車両が到着（集中）したり出発（発生）したりするポイントです。</li>
-<li>ゾーンは交通需要を予測するための任意のエリアです。</li>
-<li>ゾーンには交通発生集中点として交差点と建物が登録されており建物の情報からゾーンでの交通需要を予測し車の集中発生をシミュレーションします。</li>
-<li>手順を開始する前に予めPLATEAU SDK for Unityにより都市モデルをインポートし道路ネットワークの生成・整備を行っておく必要があります。</li>
-<li>Unityのメニューバーから<code>PLATEAU</code>-<code>交通シミュレータ</code>を選択し<code>交通シミュレータ</code>ウィンドウを開き<code>交通集中発生点設定</code>タブを選択します。</li>
-</ul>
+<p>本機能は、シミュレーション用の道路ネットワークに交通発生・集中のポイントを設定するための機能です。</p>
+<p>交通集中発生点は、車両が到着（集中）したり出発（発生）したりするポイントであり、ゾーンを用いて交通需要を予測します。</p>
 <p><img src="../resources/ZoneSetting/MenuTab.png" alt="交通集中発生点設定タブ"></p>
-<h2 id="ゾーンの生成">ゾーンの生成</h2>
+<h2 id="事前準備">事前準備</h2>
+<p>PLATEAU SDK for Unity により都市モデルをインポートし、道路ネットワークの生成・整備を行っておく必要があります。</p>
+<p>Unityのメニューバーから<code>PLATEAU</code>-<code>交通シミュレータ</code>を選択し<code>交通シミュレータ</code>ウィンドウを開き<code>交通集中発生点設定</code>タブを選択します。</p>
+<h2 id="利用手順">利用手順</h2>
+<h3 id="ゾーンの生成">ゾーンの生成</h3>
+<p><code>自動生成</code>をクリックする、おおまかな街区ごとにゾーンと道路ネットワーク端部の交通集中発生点を自動で生成できます。</p>
+<p>  <img src="../resources/ZoneSetting/AutoGenerate.png" alt="自動生成"></p>
+<p>生成完了後、ゾーン（青色の形状）と端部の交通集中発生点（赤色の形状）が生成されます。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneGenerated.png" alt="自動生成完了"></p>
+<h3 id="ゾーンの選択">ゾーンの選択</h3>
+<p>ゾーン上のアイコンをクリックすると、ゾーンが選択されてハイライトされます。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneSelected.png" alt="ゾーン選択"></p>
+<h3 id="ゾーンに属する建築物の登録解除">ゾーンに属する建築物の登録・解除</h3>
+<p>ゾーンを選択し、ハイライトされた建物をクリックすると、ゾーンに属する建物を登録・解除できます。</p>
 <ul>
-<li><code>自動生成</code>をクリックすることでおおまかな街区ごとにゾーンと道路ネットワーク端部の交通集中発生点を生成することができます。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/AutoGenerate.png" alt="自動生成"></p>
-<ul>
-<li>生成が完了するとゾーン（青色の形状）と道路ネットワーク端部の交通集中発生点（赤色の形状）が生成されます。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneGenerated.png" alt="自動生成完了"></p>
-<h2 id="ゾーンの選択">ゾーンの選択</h2>
-<ul>
-<li>ゾーン上のアイコンをクリックするとゾーンが選択されハイライトされます。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneSelected.png" alt="ゾーン選択"></p>
-<h2 id="ゾーンに属する建物の登録解除">ゾーンに属する建物の登録・解除</h2>
-<ul>
-<li><p>ゾーンに属する建物の登録・解除を行うにはゾーンを選択しハイライトされた建物をクリックします。</p>
-</li>
 <li><p>登録中</p>
+<p>  <img src="../resources/ZoneSetting/BuildingAssign.png" alt="建物登録"></p>
+</li>
+<li><p>解除</p>
+<p>  <img src="../resources/ZoneSetting/BuildingUnassign.png" alt="建物解除"></p>
 </li>
 </ul>
-<p><img src="../resources/ZoneSetting/BuildingAssign.png" alt="建物登録"></p>
+<h3 id="ゾーンに属する交通集中発生点の登録解除">ゾーンに属する交通集中発生点の登録・解除</h3>
+<p>ゾーンを選択し、交通発生集中点のアイコンをクリックすると、交通集中発生点を登録・解除できます。</p>
 <ul>
-<li>解除</li>
-</ul>
-<p><img src="../resources/ZoneSetting/BuildingUnassign.png" alt="建物解除"></p>
-<h2 id="ゾーンに属する交通集中発生点の登録解除">ゾーンに属する交通集中発生点の登録・解除</h2>
-<ul>
-<li><p>ゾーンに属する交通発生集中点の登録・解除を行うにはゾーンを選択し交通集中点アイコンをクリックします。</p>
+<li><p>登録中</p>
+<p>  <img src="../resources/ZoneSetting/PointAssign.png" alt="交通発生集中点登録"></p>
 </li>
-<li><p>登録</p>
+<li><p>解除</p>
+<p>  <img src="../resources/ZoneSetting/PointUnassign.png" alt="交通発生集中点解除"></p>
 </li>
 </ul>
-<p><img src="../resources/ZoneSetting/PointAssign.png" alt="交通発生集中点登録"></p>
-<ul>
-<li>解除</li>
-</ul>
-<p><img src="../resources/ZoneSetting/PointUnassign.png" alt="交通発生集中点解除"></p>
-<h2 id="ゾーン形状の編集">ゾーン形状の編集</h2>
-<ul>
-<li><p>ゾーンの形状を変更するにはProBuilderを使用します。セットアップについてはUnityのページを参照してください。</p>
-</li>
-<li><p>ゾーンを選択します。</p>
-</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneEdit.png" alt="ゾーン編集"></p>
-<ul>
-<li><code>ProBuilder</code>ウィンドウを表示し<code>Vertex Selection</code>を選択します。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneEditProbuilder.png" alt="ゾーン編集"></p>
-<ul>
-<li>ゾーン外周の頂点にフォーカスすると点が表示されます。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneEditProbuilderPoint.png" alt="ゾーン編集"></p>
-<ul>
-<li>点をクリックするとギズモが表示され、移動することで形状を変更することができます。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneEdited.png" alt="ゾーン編集"></p>
-<h2 id="結合">結合</h2>
-<ul>
-<li>複数のゾーンを一つにまとめるにはCtrlキーを押下したまま複数のゾーンを選択します。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneCombine.png" alt="ゾーン結合"></p>
-<ul>
-<li><code>結合</code>をクリックすることでゾーンを結合することができます。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneCombineButton.png" alt="ゾーン結合"></p>
-<p><img src="../resources/ZoneSetting/ZoneGenerated.png" alt="ゾーン結合"></p>
-<h2 id="追加">追加</h2>
-<ul>
-<li>ゾーンを追加するには<code>追加</code>を選択します。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneAddButton.png" alt="ゾーン追加"></p>
-<ul>
-<li>ハイライトされた建物を選択するとゾーンが追加されます。</li>
-<li>シーン上で右クリックすると追加をとりやめます。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneAdd.png" alt="ゾーン追加"></p>
-<p><img src="../resources/ZoneSetting/ZoneAdded.png" alt="ゾーン追加"></p>
-<h2 id="削除">削除</h2>
-<ul>
-<li>ゾーンを削除するにはゾーンをを選択します。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneRemove.png" alt="ゾーン削除"></p>
-<ul>
-<li><code>削除</code>をクリックすることでゾーンを削除することができます。</li>
-</ul>
-<p><img src="../resources/ZoneSetting/ZoneRemoveButton.png" alt="ゾーン削除"></p>
-<p><img src="../resources/ZoneSetting/ZoneRemoved.png" alt="ゾーン削除"></p>
+<h3 id="ゾーン形状の編集">ゾーン形状の編集</h3>
+<p>ゾーンの形状を変更するには<code>ProBuilder</code>を使用します。セットアップについてはUnityのページを参照してください。</p>
+<p>ゾーンを選択します。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneEdit.png" alt="ゾーン編集"></p>
+<p><code>ProBuilder</code>ウィンドウを表示し<code>Vertex Selection</code>を選択します。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneEditProbuilder.png" alt="ゾーン編集"></p>
+<p>ゾーン外周の頂点にフォーカスすると操作点が表示されます。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneEditProbuilderPoint.png" alt="ゾーン編集"></p>
+<p>操作点をクリックするとギズモが表示され、移動することで形状を変更できます。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneEdited.png" alt="ゾーン編集"></p>
+<h3 id="ゾーンの結合">ゾーンの結合</h3>
+<p>Ctrlキーを押下したまま複数のゾーンを選択します。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneCombine.png" alt="ゾーン結合"></p>
+<p><code>結合</code>をクリックすることでゾーンを結合することができます。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneCombineButton.png" alt="ゾーン結合"></p>
+<p>  <img src="../resources/ZoneSetting/ZoneGenerated.png" alt="ゾーン結合"></p>
+<h3 id="ゾーンの追加">ゾーンの追加</h3>
+<p><code>追加</code>をクリックします。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneAddButton.png" alt="ゾーン追加"></p>
+<p>ハイライトされた建築物を選択すると建築物の形状で新しいゾーンが追加されます。</p>
+<p>シーン上で右クリックすると追加をキャンセルできます。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneAdd.png" alt="ゾーン追加"></p>
+<p>  <img src="../resources/ZoneSetting/ZoneAdded.png" alt="ゾーン追加"></p>
+<h3 id="ゾーンの削除">ゾーンの削除</h3>
+<p>削除したいゾーンを選択します。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneRemove.png" alt="ゾーン削除"></p>
+<p><code>削除</code>をクリックすることでゾーンを削除することができます。</p>
+<p>  <img src="../resources/ZoneSetting/ZoneRemoveButton.png" alt="ゾーン削除"></p>
+<p>  <img src="../resources/ZoneSetting/ZoneRemoved.png" alt="ゾーン削除"></p>
 </article>
           </div>
           

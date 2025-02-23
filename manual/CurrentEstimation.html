@@ -79,28 +79,27 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="エリア内既存od交通量推定">エリア内既存OD交通量推定</h1>
 
-<p>ゾーンに属する建物の用途別延べ床面積およびシミュレーション条件から算出した発生集中原単位をもとめ、ゾーンごとの車両の発生集中量を推定し既存OD交通量ファイルを出力します。</p>
+<p>本機能は、ゾーンに属する建物の用途別延べ床面積およびシミュレーション条件から発生集中原単位を算出し、ゾーンごとの車両の発生集中量を推定する機能です。</p>
+<p>算出されたデータは、既存OD交通量ファイルとして出力され、シミュレーションの基礎データとして利用されます。</p>
 <p><img src="../resources/CurrentEstimation/MenuTab.png" alt="既存OD交通量推定"></p>
-<h2 id="入出力設定">入出力設定</h2>
+<h2 id="事前準備">事前準備</h2>
+<p>シミュレーション用道路ネットワークがデータ出力機能で出力されていること。</p>
+<p>断面交通量データおよび交差点交通量データを用意すること。</p>
+<h2 id="利用手順">利用手順</h2>
+<h3 id="入出力設定">入出力設定</h3>
 <ul>
 <li><p>道路ネットワーク参照フォルダ</p>
-<ul>
-<li><a href="Export.html">データ出力機能</a>で出力したシミュレーション用道路ネットワークが格納されたファイルを指定します。</li>
-</ul>
+<p><a href="Export.html">データ出力機能</a>で出力したシミュレーション用道路ネットワークが格納されたファイルを指定します。</p>
 </li>
 <li><p>観測交通量参照フォルダ</p>
-<ul>
-<li>断面交通量データ・交差点交通量データが格納されたファイルを指定します。</li>
-</ul>
+<p>断面交通量データ・交差点交通量データが格納されたファイルを指定します。</p>
 </li>
 <li><p>既存OD交通量出力フォルダ</p>
-<ul>
-<li>既存OD交通量ファイルの出力先を指定します。</li>
-</ul>
+<p>既存OD交通量ファイルの出力先を指定します。</p>
+<p><img src="../resources/CurrentEstimation/InOut.png" alt="既存OD交通量推定"></p>
 </li>
 </ul>
-<p><img src="../resources/CurrentEstimation/InOut.png" alt="既存OD交通量推定"></p>
-<h2 id="シミュレーション条件設定">シミュレーション条件設定</h2>
+<h3 id="シミュレーション条件設定">シミュレーション条件設定</h3>
 <ul>
 <li>シミュレーション日</li>
 <li>発生集中原単位（業務施設）</li>
@@ -115,26 +114,20 @@
 <p>時間ごとの交通量の比率をスライダーで時間ごとに設定することができます。</p>
 </li>
 </ul>
-<p><img src="../resources/CurrentEstimation/EstimationConditions.png" alt="既存OD交通量推定"></p>
-<h2 id="シミュレーション時刻設定">シミュレーション時刻設定</h2>
+<p>  <img src="../resources/CurrentEstimation/EstimationConditions.png" alt="既存OD交通量推定"></p>
+<h3 id="シミュレーション時刻設定">シミュレーション時刻設定</h3>
 <ul>
 <li><p>シミュレーション開始時刻</p>
-<ul>
-<li>シミュレーション開始時刻を設定します。</li>
-</ul>
+<p>シミュレーション開始時刻を設定します。</p>
 </li>
 <li><p>シミュレーション終了時刻</p>
-<ul>
-<li>シミュレーション終了時刻を設定します。</li>
-</ul>
+<p>シミュレーション終了時刻を設定します。</p>
+<p><img src="../resources/CurrentEstimation/SimulationTime.png" alt="既存OD交通量推定"></p>
 </li>
 </ul>
-<p><img src="../resources/CurrentEstimation/SimulationTime.png" alt="既存OD交通量推定"></p>
-<h2 id="実行">実行</h2>
-<ul>
-<li><code>実行</code>をクリックすることでシミュレーション条件をもとに推定され出力されます。</li>
-</ul>
-<p><img src="../resources/CurrentEstimation/Execute.png" alt="既存OD交通量推定"></p>
+<h3 id="実行">実行</h3>
+<p><code>実行</code>をクリックすることでシミュレーション条件をもとに推定され出力されます。</p>
+<p>  <img src="../resources/CurrentEstimation/Execute.png" alt="既存OD交通量推定"></p>
 </article>
           </div>
           
