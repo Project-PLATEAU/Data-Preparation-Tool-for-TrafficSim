@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Editor/UIDocuments/ExportView.uss?fileID=7433441132597879392&amp;guid=cb7a45daeb1309144b086b81cebf9ae3&amp;type=3#ExportView" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="TitleArea" style="flex-grow: 0; flex-direction: row; align-items: center; justify-content: center; margin-top: 8px; margin-bottom: 8px;">
+            <ui:VisualElement name="Titleline_L" style="flex-grow: 1;" />
+            <ui:Label text="データ出力" name="LabelTrafficFocusPoint" style="-unity-text-align: upper-center; color: rgb(250, 249, 249); -unity-font-style: bold;" />
+            <ui:VisualElement name="Titleline_R" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement class="sectionTitle" style="flex-grow: 0; flex-direction: row; align-items: center;">
+            <ui:VisualElement name="IconArrow" style="flex-grow: 0; flex-shrink: 0;" />
+            <ui:Label text="書き出し設定" style="color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-top: 8px; margin-bottom: 8px; padding-right: 8px; padding-left: 8px;">
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:Label tabindex="-1" text="ファイルパス" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 0; margin-right: 0; margin-bottom: 2px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 12px; color: rgb(255, 255, 255);" />
+                <ui:TextField picking-mode="Ignore" name = "TextFieldExportPath" value="書き出し先フォルダを指定してください" style="flex-direction: column; flex-shrink: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+            </ui:VisualElement>
+            <ui:Button text="セット" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonBrowse" class="GreenButton" style="width: 80px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 0; border-top-width: 16px; border-right-width: 16px; border-bottom-width: 16px; border-left-width: 16px; align-items: center;">
+            <ui:Button text="書き出し" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonExport" class="ActionButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Runtime/UICommon/UIStyleCommon.uss?fileID=7433441132597879392&amp;guid=f234134ac601fd0499ed47fd31bcb2bb&amp;type=3#UIStyleCommon" />
+    <ui:VisualElement style="flex-grow: 1; width: 100%; height: 100%; align-items: flex-start; justify-content: flex-end;">
+        <ui:VisualElement name="ExampleContainer" style="flex-grow: 0; height: 450px; width: 400px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-bottom: 16px; margin-left: 16px; justify-content: center; align-items: flex-start;">
+            <ui:VisualElement style="flex-grow: 1; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; background-color: rgba(0, 0, 0, 0.72); padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px;">
+                <ui:Label tabindex="-1" text="道路指標値凡例" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 16px;" />
+                <ui:Label tabindex="-1" text="平均旅行速度" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 16px;" />
+                <ui:VisualElement style="flex-grow: 1; align-items: stretch; flex-direction: row;">
+                    <ui:VisualElement name="ExampleColorBar" style="flex-grow: 0; width: 22px; height: 320px; flex-shrink: 0;" />
+                    <ui:VisualElement name="ExampleThreshold" style="flex-grow: 1; justify-content: space-between; height: 320px; margin-left: 16px;">
+                        <ui:Label tabindex="-1" text="0km/h" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 16px; -unity-font-style: bold;" />
+                        <ui:Label tabindex="-1" text="10km/h" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 16px; -unity-font-style: bold;" />
+                        <ui:Label tabindex="-1" text="20km/h" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 16px; -unity-font-style: bold;" />
+                        <ui:Label tabindex="-1" text="30km/h" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 16px; -unity-font-style: bold;" />
+                        <ui:Label tabindex="-1" text="40km/h以上" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 16px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

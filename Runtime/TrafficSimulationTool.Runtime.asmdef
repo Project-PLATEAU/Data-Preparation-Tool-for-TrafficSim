@@ -1,0 +1,23 @@
+{
+    "name": "TrafficSimulationTool.Runtime",
+    "rootNamespace": "TrafficSimulationTool",
+    "references": [
+        "PLATEAU.Runtime",
+        "Cinemachine",
+        "Unity.InputSystem",
+        "libplateau",
+        "Unity.RenderPipelines.HighDefinition.Runtime",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.Splines",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

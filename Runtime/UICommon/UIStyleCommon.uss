@@ -1,0 +1,160 @@
+.unity-text-element {
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Packages/com.synesthesias.PLATEAU-TrafficSimulationTool/Runtime/UICommon/Fonts/MPLUSRounded1c-Regular%20SDF.asset?fileID=11400000&guid=16ebc954c776e604e8d8693a34969fdb&type=2#MPLUSRounded1c-Regular SDF");
+}
+/* 画面コンテナ */
+#MainContainer {
+    width:100%;
+    height:100%;
+
+background-image: resource('Bg_Menu');
+    flex-direction: row;
+}
+/* Button */
+.MenuButton {
+    height: 40px;
+    border-radius:20px;
+    background-color: rgb(128, 213, 212);
+    color: rgb(0, 55, 55);
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.MenuButton:hover{
+    background-color: rgb(122, 198, 204);
+}
+
+.OutlineButton {
+    height: 40px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: rgb(136, 147, 146);
+    background-color: rgba(136, 147, 146, 0);
+    color: rgb(128, 213, 212);
+}
+
+.OutlineButton:hover {
+    background-color: rgba(136, 147, 146, 0.2);
+}
+
+.OutlineButton:active {
+    background-color: rgba(136, 147, 146, 0.4);
+}
+
+/* アイコン */
+#IconFolder {
+    background-image: resource('Icon_Folder');
+    max-width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+#Icon_Car {
+    background-image: resource('Icon_Car');
+}
+#Icon_Road {
+    background-image: resource('Icon_Road');
+}
+#Icon_Logo {
+    background-image: resource('logo_plateau');
+}
+
+.unity-base-popup-field__label {
+    display:none;
+}
+.unity-base-field{
+    
+}
+.unity-base-field__input {
+    background-color: rgba(0, 106, 106, 0);
+    border-color: rgb(136, 147, 148);
+
+
+}
+.unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: rgb(136, 147, 148);
+}
+.unity-toggle__label{
+    display:none;
+}
+
+	.unity-toggle__checkmark{
+    background-color: rgb(128, 213, 212);
+    border-radius:4px;
+    border-width:0;
+}
+
+/* タブ */
+.TabFirst {
+    margin: 0;
+    border-radius: 30px 0 0 30px;
+}
+
+.TabMiddle {
+    margin: 0;
+    border-radius: 0 0 0 0;
+}
+
+.TabEnd {
+    margin: 0;
+    border-radius: 0 30px 30px 0;
+}
+.unity-radio-button:checked {
+    background-color: rgb(50, 75, 75);
+    border-color: rgb(136, 147, 146);
+
+}
+
+.unity-radio-button__checkmark-background {
+    width: 24px;
+    border-width: 0;
+    background-color: rgba(255, 255, 128, 0);
+}
+
+.unity-radio-button {
+    display: column;
+        justify-content: center;
+    align-items: center;
+    min-width:80px;
+    height: auto;
+    background-color: rgba(255, 255, 128, 0);
+    border-width: 1px;
+    border-color: rgb(136, 147, 146);
+}
+.unity-radio-button__label {
+    text-align: center;
+    justify-content: center;
+    min-width:auto;
+}
+
+
+.unity-radio-button__checkmark {
+    background-image: resource('SelectedIcon');
+    height:20;
+    width:20;
+      text-align: center;
+    justify-content: center;  
+    background-color: rgba(255, 255, 128, 0);
+}
+.unity-radio-button:checked {
+    background-color: rgb(128, 212, 212);
+    border-color: rgb(136, 147, 146);
+}
+#Tab_2d > VisualElement {
+    display:none;
+}
+#Tab_3d > VisualElement {
+    display:none;
+}
+
+/* パネル */
+#Panel {
+    width: auto;
+    background-color: rgba(14, 21, 20, 0.75);
+    border-radius: 24px;
+    padding: 24px;
+}
+
+#ExampleColorBar{
+    background-image: resource('ExampleColorBar');
+}
+

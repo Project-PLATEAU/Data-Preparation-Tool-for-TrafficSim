@@ -1,0 +1,41 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Runtime/UICommon/UIStyleCommon.uss?fileID=7433441132597879392&amp;guid=f234134ac601fd0499ed47fd31bcb2bb&amp;type=3#UIStyleCommon" />
+    <ui:VisualElement name="MainContainer" picking-mode="Ignore" style="flex-grow: 0; width: auto; height: 90px; flex-basis: auto; flex-shrink: 0; border-left-color: rgb(136, 147, 146); border-right-color: rgb(136, 147, 146); border-top-color: rgb(136, 147, 146); border-bottom-color: rgb(136, 147, 146); border-bottom-width: 0; border-top-width: 0; border-right-width: 0; border-left-width: 0;">
+        <ui:VisualElement name="logo" style="flex-grow: 0; width: 90px; height: 90px; flex-shrink: 0; background-color: rgb(255, 255, 255); align-items: center; justify-content: center; align-self: center;">
+            <ui:VisualElement name="Icon_Logo" style="flex-grow: 0; height: 60px; width: 42px; flex-shrink: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: flex-start; margin-right: 0; width: auto; align-items: center; padding-right: 24px; padding-left: 24px; flex-shrink: 0;">
+            <ui:VisualElement name="VisualElement" style="flex-grow: 0; flex-shrink: 0; padding-bottom: 3px; padding-top: 3px; margin-right: 16px; height: 100%; align-self: flex-start; justify-content: center;">
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonLoadVehicleTimeline" class="MenuButton" style="align-items: center;">
+                    <ui:Label text="データ読み込み" style="-unity-background-image-tint-color: rgb(0, 55, 55); color: rgb(0, 55, 55);" />
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; height: 100%; padding-top: 3px; padding-bottom: 3px;">
+                <ui:Label tabindex="-1" text="csvファイル" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; border-bottom-width: 1px; border-left-color: rgb(136, 147, 146); border-right-color: rgb(136, 147, 146); border-top-color: rgb(136, 147, 146); border-bottom-color: rgb(136, 147, 146); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0;" />
+                <ui:DropdownField label="Dropdown" name="DropDownList" style="width: 360px; height: 40px; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row; justify-content: flex-end;">
+            <ui:VisualElement name="VisualElement" style="flex-grow: 0; flex-shrink: 0; padding-bottom: 3px; padding-top: 3px; margin-right: 16px;">
+                <ui:Label tabindex="-1" text="マップ" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; border-bottom-width: 1px; border-left-color: rgb(136, 147, 146); border-right-color: rgb(136, 147, 146); border-top-color: rgb(136, 147, 146); border-bottom-color: rgb(136, 147, 146); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0;" />
+                <ui:GroupBox style="flex-direction: row;">
+                    <ui:RadioButton label="2D" name="Tab_2d" class="TabFirst" style="height: 40px; border-top-left-radius: 24px; border-bottom-left-radius: 24px; padding-left: 6px; flex-direction: row-reverse;" />
+                    <ui:RadioButton label="3D" name="Tab_3d" class="TabEnd" style="height: 40px; border-top-right-radius: 24px; border-bottom-right-radius: 24px; padding-right: 0; padding-left: 6px;" />
+                </ui:GroupBox>
+            </ui:VisualElement>
+            <ui:VisualElement name="VisualElement" style="flex-grow: 0; flex-shrink: 0; padding-bottom: 3px; padding-top: 3px; margin-right: 16px;">
+                <ui:Label tabindex="-1" text="表示" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; border-bottom-width: 1px; border-left-color: rgb(136, 147, 146); border-right-color: rgb(136, 147, 146); border-top-color: rgb(136, 147, 146); border-bottom-color: rgb(136, 147, 146); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0;" />
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row; flex-shrink: 0; width: 150px;">
+                    <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; width: 50%;">
+                        <ui:Label tabindex="-1" text="車" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; justify-content: center; -unity-text-align: middle-center;" />
+                        <ui:Toggle label="車" name="ToggleVehicle" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; width: 50%;">
+                        <ui:Label tabindex="-1" text="渋滞" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; justify-content: center; -unity-text-align: middle-center;" />
+                        <ui:Toggle label="車" name="ToggleTraffic" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

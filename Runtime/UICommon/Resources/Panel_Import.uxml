@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Runtime/UICommon/UIStyleCommon.uss?fileID=7433441132597879392&amp;guid=f234134ac601fd0499ed47fd31bcb2bb&amp;type=3#UIStyleCommon" />
+    <ui:VisualElement name="Panel_Import" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:VisualElement name="Panel" style="flex-grow: 0; width: 600px;">
+            <ui:Label tabindex="-1" text="ファイルを選択してください" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-items: center; -unity-text-align: upper-center; font-size: 16px;" />
+            <ui:VisualElement style="flex-grow: 0;">
+                <ui:Label tabindex="-1" text="車両位置情報データ" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row;">
+                    <ui:TextField picking-mode="Ignore" value="filler text" name="TextFieldVehicle" style="flex-shrink: 1; width: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                    <ui:Button text="選択" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectButtonVehicle" class="MenuButton" style="width: 100px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 0; margin-top: 16px;">
+                <ui:Label tabindex="-1" text="道路指標値データ" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row;">
+                    <ui:TextField picking-mode="Ignore" value="filler text" name="TextFieldRoadIndicator" style="flex-shrink: 1; width: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                    <ui:Button text="選択" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectButtonRoadIndicator" class="MenuButton" style="width: 100px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: center; justify-content: center; margin-top: 24px; margin-right: 16px; margin-bottom: 16px; margin-left: 16px;">
+                <ui:Button text="キャンセル" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonCancel" class="MenuButton OutlineButton" style="width: 120px;" />
+                <ui:Button text="読み込み" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonOK" class="MenuButton" style="width: 120px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

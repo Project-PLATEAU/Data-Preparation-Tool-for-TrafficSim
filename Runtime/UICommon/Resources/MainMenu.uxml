@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="GlobalNav" path="GlobalNav" />
+    <ui:Template name="Panel_Import" path="Panel_Import" />
+    <ui:Template name="Panel_TimeSlider" path="Panel_TimeSlider" />
+    <ui:Template name="ExampleView" path="ExampleView" />
+    <Style src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Runtime/UICommon/UIStyleCommon.uss?fileID=7433441132597879392&amp;guid=f234134ac601fd0499ed47fd31bcb2bb&amp;type=3#UIStyleCommon" />
+    <ui:VisualElement name="MainMenu" style="flex-grow: 1; flex-basis: auto; flex-shrink: 1; border-left-color: rgb(136, 147, 146); border-right-color: rgb(136, 147, 146); border-top-color: rgb(136, 147, 146); border-bottom-color: rgb(136, 147, 146); border-bottom-width: 1px;">
+        <ui:VisualElement name="Header" style="flex-grow: 0; height: 100px;">
+            <ui:Instance template="GlobalNav" name="GlobalNav" />
+        </ui:VisualElement>
+        <ui:VisualElement name="CenterContainer" style="flex-grow: 1; align-items: center; justify-content: center;">
+            <ui:Instance template="Panel_Import" name="Panel_Import" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LeftContainer" style="position: absolute; left: 0; bottom: 150px; width: 300px; align-items: flex-start; justify-content: flex-start;">
+            <ui:Instance template="ExampleView" name="ExampleView" />
+        </ui:VisualElement>
+        <ui:VisualElement name="BottomContainer" style="flex-grow: 0; align-items: center; height: 150px; justify-content: center;">
+            <ui:Instance template="Panel_TimeSlider" name="Panel_TimeSlider" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

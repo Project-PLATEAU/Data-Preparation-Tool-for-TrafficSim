@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="PointViewTemplate" src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Editor/UIDocuments/PointView.uxml?fileID=9197481963319205126&amp;guid=ebfa01f0eaeb0bb49a46193c2b5cb1b8&amp;type=3#PointView" />
+    <ui:Template name="SignalViewTemplate" src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Editor/UIDocuments/SignalView.uxml?fileID=9197481963319205126&amp;guid=ff7fb153ceca04e4eaee9c85ff6d7102&amp;type=3#SignalView" />
+    <ui:Template name="EstimationViewTemplate" src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Editor/UIDocuments/EstimationView.uxml?fileID=9197481963319205126&amp;guid=eabc0bc42c17fbe409b3cf8a474edd8c&amp;type=3#EstimationView" />
+    <ui:Template name="ExportViewTemplate" src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Editor/UIDocuments/ExportView.uxml?fileID=9197481963319205126&amp;guid=bab8c9a08510193429a62b8d8965e898&amp;type=3#ExportView" />
+    <Style src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Editor/TrafficSimulationToolWindow.uss?fileID=7433441132597879392&amp;guid=31dee12feba297f48bf036f15f681fed&amp;type=3#TrafficSimulationToolWindow" />
+    <ui:VisualElement name="Root" style="flex-grow: 1; padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px; background-color: rgb(56, 56, 56);">
+        <ui:VisualElement name="HeaderArea" style="flex-grow: 0; height: auto; background-color: rgba(103, 103, 103, 0); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; border-bottom-left-radius: 16px; justify-content: center;">
+            <ui:VisualElement name="HeaderPanel" style="flex-grow: 0; flex-shrink: 0; width: 100%; height: 124px; background-color: rgba(120, 119, 119, 0.84); align-items: center; justify-content: center; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;">
+                <ui:VisualElement name="HeaderImage" class="editor_logo" style="flex-grow: 0; flex-shrink: 0; width: 245px; height: 54px;" />
+                <ui:VisualElement name="TitlePanel" style="flex-grow: 0; height: auto; background-color: rgb(111, 121, 121); width: 245px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px;">
+                    <ui:Label text="交通シミュレータ" name="TitleText" style="color: rgb(255, 255, 255); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: upper-center;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="ContentsArea" style="flex-grow: 1;">
+            <ui:GroupBox name="Menu" style="margin-top: 16px; width: 100%;">
+                <ui:RadioButton label="交通発生点設定" name="MenuTabPoint" class="SubMenuFirst" style="flex-direction: column-reverse; color: rgb(255, 255, 255); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; font-size: 12px; padding-left: 8px;" />
+                <ui:RadioButton label="信号現示設定" name="MenuTabSignal" style="flex-direction: column-reverse; color: rgb(255, 255, 255); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; font-size: 12px;" />
+                <ui:RadioButton label="交通量推定" name="MenuTabEstimation" style="flex-direction: column-reverse; color: rgb(255, 255, 255); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; font-size: 12px;" />
+                <ui:RadioButton label="データ出力" name="MenuTabExport" class="SubMenuEnd" style="flex-direction: column-reverse; color: rgb(255, 255, 255); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-right: 8px; font-size: 12px;" />
+            </ui:GroupBox>
+            <ui:ScrollView name="ScrollView" style="height: auto;">
+                <ui:Instance template="PointViewTemplate" name="PointView" style="display: none;"/>
+                <ui:Instance template="SignalViewTemplate" name="SignalView"  style="display: none;" />
+                <ui:Instance template="EstimationViewTemplate" name="EstimationView"  />
+                <ui:Instance template="ExportViewTemplate" name="ExportView" style="display: none;"/>
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

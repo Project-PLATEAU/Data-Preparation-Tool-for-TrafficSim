@@ -1,0 +1,37 @@
+{
+    "name": "TrafficSimulationTool.Editor",
+    "rootNamespace": "TrafficSimulationTool",
+    "references": [
+        "PLATEAU.Editor",
+        "PLATEAU.Runtime",
+        "libplateau",
+        "Unity.ProBuilder.Editor",
+        "Unity.ProBuilder",
+        "TrafficSimulationTool.Runtime",
+        "Cinemachine",
+        "PlateauToolkit.Sandbox",
+        "Unity.Splines",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "../Plugins/GeoJSON.Net/GeoJSON.Net.dll",
+        "../Plugins/NetTopologySuite/NetTopologySuite.dll",
+        "../Plugins/LibTessDotNet/LibTessDotNet.Double.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.synesthesias.plateau-unity-toolkit",
+            "expression": "",
+            "define": "PLATEAU_TOOLKIT"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,207 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Editor/UIDocuments/EstimationView.uss?fileID=7433441132597879392&amp;guid=4856fe3695703ac4f8a6b5ba094d4e31&amp;type=3#EstimationView" />
+    <ui:VisualElement name="EstimationView" style="flex-grow: 1; background-color: rgb(56, 56, 56); width: 100%;">
+        <ui:VisualElement name="TitleArea" style="flex-grow: 0; flex-direction: row; align-items: center; justify-content: center; width: 100%;">
+            <ui:VisualElement name="Titleline_L" style="flex-grow: 0; flex-shrink: 0;" />
+            <ui:Label tabindex="-1" text="交通量推定" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255);" />
+            <ui:VisualElement name="Titleline_R" style="flex-grow: 0; flex-shrink: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="title_DevEstimation" class="sectionTitle" style="flex-grow: 0; flex-direction: row; align-items: center; margin-bottom: 6px; margin-top: 16px; width: 100%;">
+            <ui:VisualElement name="IconArrow" style="flex-grow: 0;" />
+            <ui:Label tabindex="-1" text="エリア内既存OD交通量推定" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ODEstimationSetting" style="flex-grow: 0; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px; width: 100%; align-items: center;">
+            <ui:VisualElement name="Import_Network" style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-bottom: 12px; width: 100%; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label=" 道路ネットワーク参照フォルダ" value="データが選択されていません" name="NewtworkFile" auto-correction="false" is-delayed="false" style="margin-bottom: 0; flex-direction: column; flex-shrink: 1; width: 120%;" />
+                <ui:Button text="読み込み" parse-escape-sequences="true" display-tooltip-when-elided="true" class="GreenButton" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Import_TrafficVolume" style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-bottom: 12px; width: 100%; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label=" 観測交通量参照フォルダ" value="データが選択されていません" name="IntersectionVolumeFile" auto-correction="false" is-delayed="false" style="margin-bottom: 0; flex-direction: column; flex-shrink: 1; width: 120%; margin-top: 0;" />
+                <ui:Button text="読み込み" parse-escape-sequences="true" display-tooltip-when-elided="true" class="GreenButton" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Export_File" style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-bottom: 12px; width: 100%; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label="既存交通OD交通量出力フォルダ" value="書き出し先フォルダを指定してください" name="ExportFilePath" auto-correction="false" is-delayed="false" style="margin-bottom: 0; flex-direction: column; flex-shrink: 1; width: 120%; margin-top: 0;" />
+                <ui:Button text="設定" parse-escape-sequences="true" display-tooltip-when-elided="true" class="GreenButton" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ConditionsPanel" style="flex-grow: 1; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; align-items: center; width: 100%; margin-bottom: 12px;">
+                <ui:Label tabindex="-1" text="シミュレーション条件" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 6px; margin-right: 0; margin-bottom: 6px; margin-left: 0; align-items: center; -unity-text-align: upper-center; font-size: 16px; -unity-font-style: bold; color: rgb(255, 255, 255);" />
+                <ui:DropdownField label="シミュレーション日" name="PresetConditionDay" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+                <ui:DropdownField label="発生集中原単位（業務施設）" name="PresetConditionBusiness" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+                <ui:DropdownField label="発生集中原単位（商業施設）" name="PresetConditionCommerce" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+                <ui:DropdownField label="自動車分担率" name="PresetConditionShare" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+                <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+                    <ui:Label picking-mode="Ignore" text="" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:Label picking-mode="Ignore" text="発生集中原単位" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:Label picking-mode="Ignore" text="自動車分担率" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:Label picking-mode="Ignore" text="台換算係数" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+                    <ui:Label picking-mode="Ignore" text="業務施設" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionBusinessUnit" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionBusinessRate" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionBusinessFactor" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+                    <ui:Label picking-mode="Ignore" text="商業施設" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionCommerceUnit" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionCommerceRate" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionCommerceFactor" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+                    <ui:Label picking-mode="Ignore" text="住宅" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionShareUnit" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionShareRate" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" value="01" name="ConditionShareFactor" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="display: flex; flex-direction: row; justify-content: space-between; width: 100%;">
+                    <ui:VisualElement name="DestinationRateSliders" style="flex-grow: 1; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; align-items: center; width: 100%; margin-bottom: 12px;">
+                        <ui:Label picking-mode="Ignore" text="集中時間帯係数" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                        <ui:Slider label="0時" high-value="1" name="TimeSlider_0" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="1時" high-value="1" name="TimeSlider_1" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="2時" high-value="1" name="TimeSlider_2" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="3時" high-value="1" name="TimeSlider_3" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="4時" high-value="1" name="TimeSlider_4" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="5時" high-value="1" name="TimeSlider_5" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="6時" high-value="1" name="TimeSlider_6" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="7時" high-value="1" name="TimeSlider_7" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="8時" high-value="1" name="TimeSlider_8" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="9時" high-value="1" name="TimeSlider_9" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="10時" high-value="1" name="TimeSlider_10" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="11時" high-value="1" name="TimeSlider_11" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="12時" high-value="1" name="TimeSlider_12" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="13時" high-value="1" name="TimeSlider_13" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="14時" high-value="1" name="TimeSlider_14" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="15時" high-value="1" name="TimeSlider_15" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="16時" high-value="1" name="TimeSlider_16" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="17時" high-value="1" name="TimeSlider_17" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="18時" high-value="1" name="TimeSlider_18" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="19時" high-value="1" name="TimeSlider_19" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="20時" high-value="1" name="TimeSlider_20" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="21時" high-value="1" name="TimeSlider_21" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="22時" high-value="1" name="TimeSlider_22" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="23時" high-value="1" name="TimeSlider_23" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="OccurrenceRateSliders" style="flex-grow: 1; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; align-items: center; width: 100%; margin-bottom: 12px;">
+                        <ui:Label picking-mode="Ignore" text="発生時間帯係数" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                        <ui:Slider label="0時" high-value="1" name="TimeSlider_0" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="1時" high-value="1" name="TimeSlider_1" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="2時" high-value="1" name="TimeSlider_2" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="3時" high-value="1" name="TimeSlider_3" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="4時" high-value="1" name="TimeSlider_4" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="5時" high-value="1" name="TimeSlider_5" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="6時" high-value="1" name="TimeSlider_6" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="7時" high-value="1" name="TimeSlider_7" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="8時" high-value="1" name="TimeSlider_8" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="9時" high-value="1" name="TimeSlider_9" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="10時" high-value="1" name="TimeSlider_10" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="11時" high-value="1" name="TimeSlider_11" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="12時" high-value="1" name="TimeSlider_12" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="13時" high-value="1" name="TimeSlider_13" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="14時" high-value="1" name="TimeSlider_14" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="15時" high-value="1" name="TimeSlider_15" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="16時" high-value="1" name="TimeSlider_16" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="17時" high-value="1" name="TimeSlider_17" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="18時" high-value="1" name="TimeSlider_18" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="19時" high-value="1" name="TimeSlider_19" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="20時" high-value="1" name="TimeSlider_20" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="21時" high-value="1" name="TimeSlider_21" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="22時" high-value="1" name="TimeSlider_22" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                        <ui:Slider label="23時" high-value="1" name="TimeSlider_23" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:TextField picking-mode="Ignore" label="時間解像度" value="15" name="TimeResolution" style="margin-bottom: 12px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="StartTimePanel" style="flex-grow: 1; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; align-items: center; width: 100%; margin-bottom: 12px;">
+                <ui:Label tabindex="-1" text="シミュレーション開始時刻" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 18px; color: rgb(255, 255, 255);" />
+                <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+                    <ui:TextField picking-mode="Ignore" label="西暦" value="2024" name="Date_Year" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" label="月" value="01" name="Date_Month" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" label="日" value="01" name="Date_Day" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" label="時" value="12" name="Date_Hour" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" label="分" value="00" name="Date_Min" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 0; margin-left: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="EndTimePanel" style="flex-grow: 1; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; align-items: center; width: 100%;">
+                <ui:Label tabindex="-1" text="シミュレーション終了時刻" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 18px; color: rgb(255, 255, 255);" />
+                <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+                    <ui:TextField picking-mode="Ignore" label="西暦" value="2024" name="Date_Year" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" label="月" value="01" name="Date_Month" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" label="日" value="01" name="Date_Day" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" label="時" value="12" name="Date_Hour" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+                    <ui:TextField picking-mode="Ignore" label="分" value="00" name="Date_Min" style="margin-bottom: 0; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 0; margin-left: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="EstimateExistingButton" class="ActionButton" style="flex-direction: row; align-items: center; margin-top: 12px; margin-right: 0; margin-bottom: 12px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                <ui:VisualElement name="IconAdd" style="flex-grow: 0; flex-shrink: 0; width: 24px; height: 24px; -unity-background-image-tint-color: rgb(23, 84, 51);" />
+                <ui:Label tabindex="-1" text="実行" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 16px;" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement name="title_DevEstimation" class="sectionTitle" style="flex-grow: 0; flex-direction: row; align-items: center; margin-bottom: 6px; width: 100%;">
+            <ui:VisualElement name="IconArrow" style="flex-grow: 0;" />
+            <ui:Label tabindex="-1" text="開発交通量推定" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="DevEstimationSetting" style="flex-grow: 0; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px; width: 100%;">
+            <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-bottom: 12px; width: 100%; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label="開発ゾーン" value="開発ゾーンが選択されていません" name="DevZoneName" auto-correction="false" is-delayed="false" style="margin-bottom: 0; flex-direction: column; flex-shrink: 1; width: 120%;" />
+                <ui:Button text="開発ゾーン指定" name="ButtonDevZoneSelect" parse-escape-sequences="true" display-tooltip-when-elided="true" class="GreenButton" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-bottom: 12px; width: 100%; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label="参照ゾーン" value="参照ゾーンが選択されていません" name="RefZoneName" auto-correction="false" is-delayed="false" style="margin-bottom: 0; flex-direction: column; flex-shrink: 1; width: 120%;" />
+                <ui:Button text="参照ゾーン指定" name="ButtonRefZoneSelect" parse-escape-sequences="true" display-tooltip-when-elided="true" class="GreenButton" />
+            </ui:VisualElement>
+            <ui:VisualElement name="DevImport" style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-bottom: 12px; width: 100%; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label="既存交通OD交通量参照フォルダ" value="データが選択されていません" name="DevImportPath" auto-correction="false" is-delayed="false" style="margin-bottom: 0; flex-direction: column; flex-shrink: 1; width: 120%; margin-top: 0;" />
+                <ui:Button text="読み込み" parse-escape-sequences="true" display-tooltip-when-elided="true" class="GreenButton" />
+            </ui:VisualElement>
+            <ui:TextField picking-mode="Ignore" label="開発店舗面積(㎡)" value="filler text" name="AreaSetting" style="margin-bottom: 12px;" />
+            <ui:DropdownField label="立地市町村の行政人口" name="PopulationSetting" index="-1" style="margin-bottom: 12px;" />
+            <ui:TextField picking-mode="Ignore" label="最寄り駅の距離(m)" value="filler text" name="StationSetting" style="margin-bottom: 12px;" />
+            <ui:DropdownField label="地域区分" name="AreaCategorySetting" index="-1" style="margin-bottom: 12px;" />
+            <ui:TextField picking-mode="Ignore" label="滞在時間" value="filler text" name="StayTime" style="margin-bottom: 12px;" />
+            <ui:Label tabindex="-1" text="時間帯別交通量" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 6px; margin-right: 0; margin-bottom: 6px; margin-left: 0; align-items: center; -unity-text-align: upper-center; font-size: 16px; -unity-font-style: bold; color: rgb(255, 255, 255);" />
+            <ui:GroupBox name="TimeSettingTab" style="flex-direction: row; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                <ui:RadioButton label="簡易" name="Tab_simple" style="flex-shrink: 1; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; border-top-left-radius: 6px; -unity-text-align: upper-center; align-items: center; font-size: 16px;" />
+                <ui:RadioButton label="詳細" name="Tab_complex" style="flex-shrink: 1; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; border-top-left-radius: 0; -unity-text-align: upper-center; align-items: center; border-top-right-radius: 6px; font-size: 16px;" />
+            </ui:GroupBox>
+            <ui:VisualElement name="SimpleSettingPanel" style="flex-grow: 1; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; align-items: center;">
+                <ui:DropdownField label="ピーク時間(時)" name="PeakTimeSetting" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+                <ui:TextField picking-mode="Ignore" label="標準偏差（0-24時間）" value="filler text" name="DefaultTimeSetting" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+                <ui:TextField picking-mode="Ignore" label="ピーク率(0-100%)" value="filler text" name="PeakSetting" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="EstimateDevelopmenButton" class="ActionButton" style="flex-direction: row; align-items: center; margin-top: 12px; margin-right: 0; margin-bottom: 12px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                    <ui:VisualElement name="IconAdd" style="flex-grow: 0; flex-shrink: 0; width: 24px; height: 24px; -unity-background-image-tint-color: rgb(23, 84, 51);" />
+                    <ui:Label tabindex="-1" text="実行" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 16px;" />
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement name="DetailSettingPanel" style="flex-grow: 1; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-left-color: rgb(111, 121, 121); border-right-color: rgb(111, 121, 121); border-top-color: rgb(111, 121, 121); border-bottom-color: rgb(111, 121, 121); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; align-items: center;">
+                <ui:Slider label="0時" high-value="1" name="TimeSlider_0" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="1時" high-value="1" name="TimeSlider_1" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="2時" high-value="1" name="TimeSlider_2" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="3時" high-value="1" name="TimeSlider_3" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="4時" high-value="1" name="TimeSlider_4" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="5時" high-value="1" name="TimeSlider_5" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="6時" high-value="1" name="TimeSlider_6" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="7時" high-value="1" name="TimeSlider_7" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="8時" high-value="1" name="TimeSlider_8" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="9時" high-value="1" name="TimeSlider_9" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="10時" high-value="1" name="TimeSlider_10" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="11時" high-value="1" name="TimeSlider_11" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="12時" high-value="1" name="TimeSlider_12" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="13時" high-value="1" name="TimeSlider_13" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="14時" high-value="1" name="TimeSlider_14" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="15時" high-value="1" name="TimeSlider_15" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="16時" high-value="1" name="TimeSlider_16" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="17時" high-value="1" name="TimeSlider_17" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="18時" high-value="1" name="TimeSlider_18" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="19時" high-value="1" name="TimeSlider_19" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="20時" high-value="1" name="TimeSlider_20" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="21時" high-value="1" name="TimeSlider_21" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="22時" high-value="1" name="TimeSlider_22" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Slider label="23時" high-value="1" name="TimeSlider_23" show-input-field="true" style="margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0; width: 100%;" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="EstimateDevelopmenButton" class="ActionButton" style="flex-direction: row; align-items: center; margin-top: 12px; margin-right: 0; margin-bottom: 12px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                    <ui:VisualElement name="IconAdd" style="flex-grow: 0; flex-shrink: 0; width: 24px; height: 24px; -unity-background-image-tint-color: rgb(23, 84, 51);" />
+                    <ui:Label tabindex="-1" text="実行" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 16px;" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

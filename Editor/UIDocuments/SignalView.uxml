@@ -1,0 +1,123 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.synesthesias.plateau-trafficsimulationtool/Editor/UIDocuments/SignalView.uss?fileID=7433441132597879392&amp;guid=8df80dff2a3a9a848842e2f961c6e675&amp;type=3#SignalView" />
+    <TabbedView>
+        <TabButton />
+        <TabButton />
+    </TabbedView>
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="TitleArea" style="flex-grow: 0; flex-direction: row; align-items: center; justify-content: center; margin-top: 8px; margin-bottom: 8px;">
+            <ui:VisualElement name="Titleline_L" style="flex-grow: 1;" />
+            <ui:Label text="信号現示設定" name="LabelTrafficFocusPoint" style="-unity-text-align: upper-center; color: rgb(250, 249, 249); -unity-font-style: bold;" />
+            <ui:VisualElement name="Titleline_R" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: center; background-color: rgb(62, 62, 62);">
+            <ui:VisualElement name="IconArrow" style="flex-grow: 0;" />
+            <ui:Label text="ファイル読み込み" class="sectionTitle" style="color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ImportDefine" style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-bottom: 12px; width: 100%; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label="信号定義" value="データが選択されていません" name="PathImportDefine" auto-correction="false" is-delayed="false" style="margin-bottom: 0; flex-direction: column; flex-shrink: 1; width: 120%;" />
+                <ui:Button text="読み込み" name="ButtonImportDefine" parse-escape-sequences="true" display-tooltip-when-elided="true" class="GreenButton" />
+            </ui:VisualElement>
+        <ui:VisualElement name="ImportControl" style="flex-grow: 0; flex-direction: row; align-items: flex-end; margin-bottom: 12px; width: 100%; flex-shrink: 0;">
+                <ui:TextField picking-mode="Ignore" label="信号制御" value="データが選択されていません" name="PathImportControl" auto-correction="false" is-delayed="false" style="margin-bottom: 0; flex-direction: column; flex-shrink: 1; width: 120%;" />
+                <ui:Button text="読み込み" name="ButtonImportControl" parse-escape-sequences="true" display-tooltip-when-elided="true" class="GreenButton" />
+            </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: center; background-color: rgb(62, 62, 62);">
+            <ui:VisualElement name="IconArrow" style="flex-grow: 0;" />
+            <ui:Label text="変換設定" class="sectionTitle" style="color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+        <ui:DropdownField label="交差点番号" name="IntersectionNumber" index="-1" style="margin-bottom: 12px;" />
+        <ui:DropdownField label="定義日付" name="SelectDefineDate" index="-1" style="margin-bottom: 12px;" />
+        <ui:DropdownField label="制御日付" name="SelectControlDate" index="-1" style="margin-bottom: 12px;" />
+        <ui:DropdownField label="制御時刻" name="SelectControlTime" index="-1" style="margin-bottom: 12px;" />
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流入リンク１" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginInflowLink1" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceInflowLink1" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流入リンク２" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginInflowLink2" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceInflowLink2" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流入リンク３" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginInflowLink3" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceInflowLink3" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流入リンク４" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginInflowLink4" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceInflowLink4" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流入リンク５" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginInflowLink5" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceInflowLink5" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流入リンク６" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginInflowLink6" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceInflowLink6" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流入リンク７" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginInflowLink7" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceInflowLink7" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流入リンク８" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginInflowLink8" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceInflowLink8" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流出リンク１" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginOutflowLink1" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceOutflowLink1" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流出リンク２" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginOutflowLink2" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceOutflowLink2" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流出リンク３" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginOutflowLink3" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceOutflowLink3" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流出リンク４" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginOutflowLink4" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceOutflowLink4" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流出リンク５" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginOutflowLink5" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceOutflowLink5" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流出リンク６" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginOutflowLink6" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceOutflowLink6" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流出リンク７" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginOutflowLink7" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceOutflowLink7" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:Label picking-mode="Ignore" text="流出リンク８" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:TextField picking-mode="Ignore" value="blank" name="OriginOutflowLink8" style="margin-bottom: 12; flex-shrink: 1; width: 100%; flex-direction: column; margin-top: 0; margin-right: 12px; margin-left: 0;" />
+            <ui:DropdownField  name="ReplaceOutflowLink8" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 100%; flex-direction: row;">
+            <ui:DropdownField label="適用先交差点" name="ApplyNode" index="-1" style="margin-bottom: 12px; flex-shrink: 1; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 0; margin-top: 16px; margin-bottom: 16px; align-items: center; justify-content: center;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonApply" class="OutlineButton" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 120px; align-items: center; justify-content: center; flex-direction: row;">
+                <ui:VisualElement name="IconAdd" style="flex-grow: 0; flex-shrink: 0; width: 24px; height: 24px;" />
+                <ui:Label tabindex="-1" text="適用" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

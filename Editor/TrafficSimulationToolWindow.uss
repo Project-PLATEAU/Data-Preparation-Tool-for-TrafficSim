@@ -1,0 +1,146 @@
+
+
+.editor_logo {
+    background-image: resource('plateau_logo');
+    width: 245px;
+    height: 54px;
+}
+
+#Menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.SubMenuFirst {
+    margin: 0;
+    border-radius: 30px 0 0 30px;
+    padding-left: 16px;
+}
+
+.SubMenuMiddle {
+    margin: 0;
+    border-radius: 0 0 0 0;
+}
+
+.SubMenuEnd {
+    margin: 0;
+    border-radius: 0 30px 30px 0;
+}
+
+
+
+
+.unity-radio-button__checkmark-background {
+    width: 24px;
+    border-width: 0;
+    background-color: rgba(255, 255, 128, 0);
+}
+
+.unity-radio-button {
+    display: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    height: 60px;
+    background-color: rgba(255, 255, 128, 0);
+    border-width: 1px;
+    border-color: rgb(136, 147, 146);
+}
+.unity-radio-button:checked {
+    background-color: rgb(50, 75, 75);
+    border-color: rgb(136, 147, 146);
+    
+}
+
+.unity-radio-button__label {
+    text-align: center;
+    justify-content: center;
+    min-width: auto;
+    color: rgb(255, 255, 255);
+}
+
+#MenuTabPoint .unity-radio-button__checkmark-background {
+    border-radius: 0;
+    height: 23px;
+    width: 37px;
+    background-image: resource('Icon_Zone');
+}
+
+#MenuTabPoint .unity-radio-button__checkmark {
+    background-image: resource('Icon_blank');
+    height: 0;
+    width: 0;
+}
+
+#MenuTabSignal .unity-radio-button__checkmark-background {
+    border-radius: 0;
+    height: 32px;
+    width: 32px;
+    background-image: resource('Icon_Sign');
+}
+
+#MenuTabSignal .unity-radio-button__checkmark {
+    background-image: resource('Icon_blank');
+    height: 0;
+    width: 0;
+}
+
+#MenuTabEstimation .unity-radio-button__checkmark-background {
+    border-radius: 0;
+    height: 28px;
+    width: 28px;
+    background-image: resource('Icon_Cars');
+    margin-top: 4px;
+}
+
+#MenuTabEstimation .unity-radio-button__checkmark {
+    background-image: resource('Icon_blank');
+    height: 0;
+    width: 0;
+}
+
+#MenuTabExport .unity-radio-button__checkmark-background {
+    border-radius: 0;
+    height: 28px;
+    width: 28px;
+    background-image: resource('Icon_Export');
+    margin-top: 4px;
+}
+
+#MenuTabExport .unity-radio-button__checkmark {
+    background-image: resource('Icon_blank');
+    height: 0;
+    width: 0;
+}
+
+Scroller #unity-dragger {
+    background-color: rgb(0, 190, 190);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+Scroller #unity-tracker {
+    background-color: rgb(96, 96, 96);
+}
+#unity-low-button {
+    background-color: rgb(79, 79, 79);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    -unity-background-image-tint-color: rgb(185, 185, 185);
+}
+
+#unity-high-button {
+    background-color: rgb(79, 79, 79);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    -unity-background-image-tint-color: rgb(185, 185, 185);
+}

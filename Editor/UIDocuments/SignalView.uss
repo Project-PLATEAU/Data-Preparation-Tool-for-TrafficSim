@@ -1,0 +1,69 @@
+.custom-label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(68, 138, 255);
+}
+/* タイトル装飾 */
+#Titleline_L{
+background-image: resource('Line_Title_R');
+width:40px;
+height:1px;
+}
+#Titleline_R{
+background-image: resource('Line_Title_L');
+width:40px;
+height:1px;
+}
+/* ボタン関連 */
+.OutlineButton {
+    height: 40px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: rgb(136, 147, 146);
+    background-color: rgba(136, 147, 146, 0);
+    color: rgb(128, 213, 212);
+}
+
+.OutlineButton:hover {
+    background-color: rgba(136, 147, 146, 0.2);
+}
+
+.OutlineButton:active {
+    background-color: rgba(136, 147, 146, 0.4);
+}
+.GreenButton {
+    height: 40px;
+    border-radius: 20px;
+    color:rgb(255, 255,255);
+    background-color: rgb(0, 106, 106);
+    width: 120px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.GreenButton:hover {
+    background-color: rgb(28, 137, 137);
+}
+
+.GreenButton:active {
+    background-color: rgb(85, 163, 173);
+}
+
+.GreenButton:disabled {
+    background-color: rgb(221, 228, 227);
+}
+.sectionTitle{
+    padding: 4px 8px;
+    background-color:rgb(62,62,62);
+}
+
+#IconAdd {
+    background-image: resource('Icon_Add');
+}
+#IconArrow{
+    background-image: resource('Icon_Arrow');
+    width:24px;
+    height:24px;
+}
