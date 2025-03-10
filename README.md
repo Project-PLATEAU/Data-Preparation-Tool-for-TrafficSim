@@ -2,25 +2,21 @@
 
 ![可視化画面](./Documentation~/resources/BasicOperation/Play.png)
 
-## 更新履歴
-| 更新日時 | リリース | 更新内容 |
-| ---- | ---- | ---- |
-| 2025/2/21 | 1st Release | 初版リリース |
+## 1. 概要
+本リポジトリでは、Project PLATEAUの令和6年度のユースケース開発業務の一部であるuc24-01「商業施設等の立地に関する交通シミュレータの開発」について、その成果物である「PLATEAU交通シミュレータ」のソースコードを公開しています。
 
-## 1. 概要 <!-- 本リポジトリでOSS化しているソフトウェア・ライブラリについて1文で説明を記載ください -->
-本リポジトリでは、Project PLATEAUの令和5年度のユースケース開発業務の一部であるuc24-01「PLATEAU交通シミュレータ」について、その成果物である「PLATEAU交通シミュレータ」のソースコードを公開しています。
-「PLATEAU交通シミュレータ」は、3D都市モデルおよび交通関連の各種オープンデータを活用し、
-大規模商業施設の開発などによって生じる周辺道路への交通影響を、簡易かつ効率的に設定・予測・可視化するためのソフトウェアです。
+「PLATEAU交通シミュレータ」は、3D都市モデルおよび交通関連の各種オープンデータを活用し、大規模商業施設の開発などによって生じる周辺道路への交通影響を、簡易かつ効率的に設定・予測・可視化するためのソフトウェアです。
 
-## 2. 「PLATEAU交通シミュレータ」について <!-- 「」内にユースケース名称を記載ください。本文は以下のサンプルを参考に記載ください。URLはアクセンチュアにて設定しますので、サンプルそのままでOKです。 -->
+
+## 2. 「PLATEAU交通シミュレータ」について
 「PLATEAU交通シミュレータ」では、3D都市モデルを用いた道路ネットワーク生成機能、交通発生点の設定機能、OD交通量（Origin-Destination）の推定機能、開発交通量の推定機能などを備え、これらを統合してシミュレーションデータを生成するUIと、シミュレーション結果を3Dで可視化する表示機能を組み合わせて提供します。
 本プロジェクトではデータの自動化とシミュレーションとの連携を推進することで、交通分野におけるデジタルツイン技術の普及と、社会的意思決定の高度化に貢献することを目指しています。
-本システムの詳細については[技術検証レポート](https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_tech_doc_0030_ver01.pdf)を参照してください。
+本システムの詳細については[技術検証レポート](https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_tech_doc_0096_ver01.pdf)を参照してください。
 
-## 3. 利用手順 <!-- 下記の通り、GitHub Pagesへリンクを記載ください。URLはアクセンチュアにて設定しますので、サンプルそのままでOKです。 -->
+## 3. 利用手順
 本システムの構築手順及び利用手順については[利用チュートリアル](https://project-plateau.github.io/Data-Preparation-Tool-for-TrafficSim/)を参照してください。
 
-## 4. システム概要 <!-- OSS化対象のシステムが有する機能を記載ください。 -->
+## 4. システム概要
 
 ### シミュレーション用データ生成
 
@@ -48,25 +44,24 @@
 | 種別        | 名称   | バージョン | 内容 |
 |------------|--------|-----------|--------------------------------|
 | ライブラリ  | [GeoJSON.Net](https://github.com/GeoJSON-Net/GeoJSON.Net/) | 1.4.1 | GeoJSON形式のデータを処理するためのライブラリ |
-| ライブラリ  | [LibTessDotNet](https://github.com/speps/LibTessDotNet/) | 1.1.15 | ポリゴンの三角分割を行うためのライブラリ |
-| ライブラリ  | [NetTopologySuite](https://github.com/NetTopologySuite/NetTopologySuite/) | 2.5.0 | 空間データの解析・処理を行うためのライブラリ |
-| ライブラリ  | [StandaloneFileBrowser](https://github.com/gkngkc/UnityStandaloneFileBrowser/) | 1.2 | Unity環境でファイルダイアログを使用するためのライブラリ |
+|   | [LibTessDotNet](https://github.com/speps/LibTessDotNet/) | 1.1.15 | ポリゴンの三角分割を行うためのライブラリ |
+|   | [NetTopologySuite](https://github.com/NetTopologySuite/NetTopologySuite/) | 2.5.0 | 空間データの解析・処理を行うためのライブラリ |
+|   | [StandaloneFileBrowser](https://github.com/gkngkc/UnityStandaloneFileBrowser/) | 1.2 | Unity環境でファイルダイアログを使用するためのライブラリ |
 
 ## 6. 動作環境 <!-- 動作環境についての仕様を記載ください。 -->
 
 ### 検証済環境
 
-| 項目              | 最小動作環境                | 推奨動作環境              | 
-|------------------|--------------------------|--------------------------| 
-| CPU             | Intel クロック周波数 2GHz 以上 | 同左                      | 
-| GPU             | NVIDIA® GeForce RTX™ 4060 Laptop GPU | 同左                      | 
-| メモリ          | 32GB 以上                 | 同左                      | 
-| ストレージ      | 200GB 以上の空き容量       | 同左                      | 
-| OS             | Windows 11 Home 64 ビット | 同左                      |
+| 項目              | 最小動作環境                | 
+|------------------|--------------------------| 
+| CPU             | Intel クロック周波数 2GHz 以上 | 
+| GPU             | NVIDIA® GeForce RTX™ 4060 Laptop GPU|  
+| メモリ          | 32GB 以上                  |
+| ストレージ      | 200GB 以上の空き容量        |
+| OS             | Windows 11 Home 64 ビット |
 
 
-
-## 7. 本リポジトリのフォルダ構成 <!-- 本GitHub上のソースファイルの構成を記載ください。 -->
+## 7. 本リポジトリのフォルダ構成
 本システムは、Unityのプラグインとして構成されています。
 
 ## 8. ライセンス <!-- 変更せず、そのまま使うこと。 -->
@@ -74,12 +69,12 @@
 - ソースコード及び関連ドキュメントの著作権は国土交通省に帰属します。
 - 本ドキュメントは[Project PLATEAUのサイトポリシー](https://www.mlit.go.jp/plateau/site-policy/)（CCBY4.0及び政府標準利用規約2.0）に従い提供されています。
 
-## 9. 注意事項 <!-- 変更せず、そのまま使うこと。 -->
+## 9. 注意事項
 
 - 本リポジトリは参考資料として提供しているものです。動作保証は行っていません。
 - 本リポジトリについては予告なく変更又は削除をする可能性があります。
 - 本リポジトリの利用により生じた損失及び損害等について、国土交通省はいかなる責任も負わないものとします。
 
-## 10. 参考資料 <!-- 技術検証レポートのURLはアクセンチュアにて記載します。 -->
-- 技術検証レポート: https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_tech_doc_0030_ver01.pdf
-- PLATEAU WebサイトのUse caseページ「PLATEAU交通シミュレータ」: https://www.mlit.go.jp/plateau/use-case/uc22-013/
+## 10. 参考資料
+- 技術検証レポート: https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_tech_doc_0096_ver01.pdf
+- PLATEAU WebサイトのUse caseページ「PLATEAU交通シミュレータ」: https://www.mlit.go.jp/plateau/use-case/uc24-01/
