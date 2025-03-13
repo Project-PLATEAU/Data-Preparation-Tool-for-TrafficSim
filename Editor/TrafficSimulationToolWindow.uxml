@@ -9,7 +9,7 @@
             <ui:VisualElement name="HeaderPanel" style="flex-grow: 0; flex-shrink: 0; width: 100%; height: 124px; background-color: rgba(120, 119, 119, 0.84); align-items: center; justify-content: center; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;">
                 <ui:VisualElement name="HeaderImage" class="editor_logo" style="flex-grow: 0; flex-shrink: 0; width: 245px; height: 54px;" />
                 <ui:VisualElement name="TitlePanel" style="flex-grow: 0; height: auto; background-color: rgb(111, 121, 121); width: 245px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px;">
-                    <ui:Label text="交通シミュレータ" name="TitleText" style="color: rgb(255, 255, 255); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: upper-center;" />
+                    <ui:Label text="交通シミュレーション支援ツール" name="TitleText" style="color: rgb(255, 255, 255); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: upper-center;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

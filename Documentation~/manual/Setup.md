@@ -34,7 +34,7 @@ Unity Hub を起動します。
 - Unityが起動したら、以下の各ツールのリリースページからtgzファイルをダウンロードします。
   - [PLATEAU SDK for Unityのリリースページ](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity/releases)
   - [PLATEAU-SDK-Toolkits-for-Unityのリリースページ](https://github.com/Project-PLATEAU/PLATEAU-SDK-Toolkits-for-Unity/releases)
-  - [交通シミュレータのリリースページ](https://github.com/Project-PLATEAU/Data-Preparation-Tool-for-TrafficSim/releases)
+  - [交通シミュレーション支援ツールのリリースページ](https://github.com/Project-PLATEAU/Data-Preparation-Tool-for-TrafficSim/releases)
 
 > [!NOTE]  
 > git指定で導入する方法は以下を参考にしてください。<br>

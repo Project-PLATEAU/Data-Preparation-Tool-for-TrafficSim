@@ -2,7 +2,7 @@
   "metadata": [],
   "build": {
     "globalMetadata": {
-      "_appTitle": "PLATEAU交通シミュレータ",
+      "_appTitle": "交通シミュレーション支援ツール",
       "_enableSearch": true
     },
     "content": [
@@ -21,7 +21,7 @@
       }
     ],
     "sitemap": {
-      "baseUrl": "https://github.com/Synesthesias/PLATEAU-TrafficSimulationTool",
+      "baseUrl": "https://github.com/Project-PLATEAU/Data-Preparation-Tool-for-TrafficSim",
       "changefreq": "weekly",
       "fileOptions": {
         "api/*": {

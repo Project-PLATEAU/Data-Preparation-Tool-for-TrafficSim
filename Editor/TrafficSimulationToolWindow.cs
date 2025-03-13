@@ -28,10 +28,10 @@ namespace TrafficSimulationTool.Editor
 
         private ViewController[] controllers;
 
-        [MenuItem("PLATEAU/交通シミュレータ")]
+        [MenuItem("PLATEAU/交通シミュレーション支援ツール")]
         public static void Open()
         {
-            var window = GetWindow<TrafficSimulationToolWindow>("交通シミュレータ");
+            var window = GetWindow<TrafficSimulationToolWindow>("交通シミュレーション支援ツール");
 
             window.Show();
         }
