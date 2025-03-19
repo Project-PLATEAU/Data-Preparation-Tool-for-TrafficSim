@@ -14,7 +14,7 @@
           items:
             - name: エリア内既存OD交通量推定
               href: CurrentEstimation.md
-            - name: 開発交通量推定
+            - name: 開発OD交通量推定
               href: DevelopEstimation.md
         - name: エクスポート
           href: Export.md

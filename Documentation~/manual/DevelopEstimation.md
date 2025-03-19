@@ -1,8 +1,8 @@
-# 開発交通量推定
+# 開発OD交通量推定
 
 本機能は、開発エリアおよび開発条件を指定し、開発エリアに係る発生集中量を推定し、開発OD交通量ファイルを出力する機能です。
 
-![開発交通量推定](../resources/DevelopEstimation/MenuTab.png)
+![開発OD交通量推定](../resources/DevelopEstimation/MenuTab.png)
 
 ## 事前準備
 
@@ -38,7 +38,7 @@
 
   指定したフォルダが開発OD交通量の出力先にもなります。
   
-  ![開発交通量推定](../resources/DevelopEstimation/EstimationOD.png)
+  ![開発OD交通量推定](../resources/DevelopEstimation/EstimationOD.png)
 
 ### 開発条件の設定
 
@@ -50,7 +50,7 @@
   - 地域区分
   - 滞在時間
 
-  ![開発交通量推定](../resources/DevelopEstimation/EstimationConditions.png)
+  ![開発OD交通量推定](../resources/DevelopEstimation/EstimationConditions.png)
 
 ### 時間帯別交通量設定
 
@@ -64,7 +64,7 @@
   - 標準偏差
   - ピーク率
 
-  ![開発交通量推定](../resources/DevelopEstimation/TrafficSimple.png)
+  ![開発OD交通量推定](../resources/DevelopEstimation/TrafficSimple.png)
 
 - 詳細
   
@@ -72,7 +72,7 @@
 
   スライドバーを操作または数値を入力します。
 
-  ![開発交通量推定](../resources/DevelopEstimation/TrafficDetail.png)
+  ![開発OD交通量推定](../resources/DevelopEstimation/TrafficDetail.png)
 
 
 ### 実行
